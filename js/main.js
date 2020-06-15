@@ -63,14 +63,11 @@ $(document).ready(function () {
     };
     defineTouch();
 
-
     /* Show/hide submenu */
     let child = document.querySelector('.menu__item_children'),
         childRef = child.querySelector('a'),
         submenu = document.querySelector('.submenu');
-    console.log(mobile);
     child.addEventListener('touchstart', function (event) {
-        console.log(mobile);
         if (!mobile) {
             submenu.classList.remove('hidden');
             return
@@ -97,7 +94,5 @@ $(document).ready(function () {
         submenu.classList.remove('hidden');
         submenu.classList.remove('shown');
     });
-
-
 
 });
