@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v0.9">
 </head>
 
 <body>
@@ -17,20 +17,26 @@
     <header class="header">
         <div class="header__container">
             <img class="header__logo" src="img/logo.png" alt="logo">
-            <nav>
-                <ul class="menu">
-                    <li class="menu__item"><a class="menu__item__ref" href="#">About</a></li>
-                    <li class="menu__item menu__item_children">
-                        <a class="menu__item__ref" href="#">Help</a>
-                        <ul class="submenu">
-                            <li class="submenu__item"><a class="submenu__item__ref" href="#">User Guide</a></li>
-                            <li class="submenu__item"><a class="submenu__item__ref" href="#">Contact Support</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu__item"><a class="menu__item__ref" href="#">Features</a></li>
-                </ul>
-            </nav>
-            <button class="header__button">Sign Up</button>
+            <div class="header__mobile">
+                <nav>
+                    <ul class="menu">
+                        <li class="menu__item"><a class="menu__item__ref" href="#">About</a></li>
+                        <li class="menu__item menu__item_children">
+                            <a class="menu__item__ref" href="#">Help</a>
+                            <ul class="submenu">
+                                <li class="submenu__item"><a class="submenu__item__ref" href="#">User Guide</a></li>
+                                <li class="submenu__item"><a class="submenu__item__ref" href="#">Contact Support</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item"><a class="menu__item__ref" href="#">Features</a></li>
+                    </ul>
+                </nav>
+                <button class="header__button">Sign Up</button>
+            </div>
+            <div id="menu-btn" class="menu-btn menu-btn_burger">
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -94,7 +100,7 @@
 
     <footer class="footer">
         <div class="footer__container">
-            <img src="img/logo-footer.png" alt="logo footer">
+            <img class="footer__logo" src="img/logo-footer.png" alt="logo footer">
             <nav>
                 <ul class="footer-menu">
                     <li class="footer-menu__item"><a href="#">About Us</a></li>
@@ -108,10 +114,17 @@
         </div>
     </footer>
 
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+        <symbol id="menu-icon" viewBox="0 0 10 6">
+            <path
+                d="M5.7063 2.7936c-.3905.3904-1.0236.3904-1.4141 0L1.8747.3763A.8837.8837 0 10.625 1.626l3.7494 3.7491a.8837.8837 0 001.2497 0l.625-.6249 3.126-3.1257A.8837.8837 0 008.1252.3748l-2.419 2.4188z" />
+        </symbol>
+    </svg>
+
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v0.9"></script>
 </body>
 
 </html>
