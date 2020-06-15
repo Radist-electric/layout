@@ -66,15 +66,24 @@ $(document).ready(function () {
     /* Show/hide submenu */
     let child = document.querySelector('.menu__item_children'),
         childRef = child.querySelector('a'),
-        submenu = document.querySelector('.submenu');
+        submenu = document.querySelector('.submenu'),
+        submenudRef = submenu.querySelectorAll('a');
     child.addEventListener('touchstart', function (event) {
+
         if (!mobile) {
             submenu.classList.remove('hidden');
             return
         }
-        if (event.target = childRef && submenu.classList.contains('hidden')) {
+        if (event.target = childRef && !submenu.classList.contains('showed')) {
             event.preventDefault();
         }
+
+        for (i = 0; i < submenudRef.length; i++) {
+            if (event.target == submenudRef[i]) {
+                window.open(submenudRef[i].href);
+            }
+        }
+        
         showHide();
     });
 
